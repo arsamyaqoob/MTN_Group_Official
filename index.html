@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MTN Group - Secure investment platform with daily earnings. Start with 20 USDT and grow your wealth.">
+    <meta name="keywords" content="MTN, investment, earnings, USDT, passive income">
+    <title>MTN Group - Earn with Secure Investments</title>
+    <link rel="website icon" type="png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff; /* Changed to white */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Add smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        header {
+            background: #ffcb05; /* Changed to white */
+            color: #000000de; /* MTN Yellow */
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            background: #ffcb05; /* MTN Yellow */
+            color: #000000de;
+            padding: 10px 20px;
+            border-radius: 4px; /* Less rounded */
+            text-decoration: none;
+            font-weight: 600; /* Less bold */
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #e6b705; /* A darker shade of yellow */
+            transform: none; /* Remove the lift effect */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: #f5f5f5; /* Light grey background */
+            color: #333; /* Dark text for contrast */
+            text-align: center;
+        }
+        .hero h1 {
+            color: #0033a0; /* A dark blue, common in corporate themes */
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: #000;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #FFD100;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid #FFD100;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: #FFD100;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #FFD100;
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: -10px;
+            width: 100%;
+            height: 2px;
+            background: #FFD100;
+            z-index: 1;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #FFD100;
+        }
+
+        .benefit-icon {
+            font-size: 30px;
+            color: #FFD100;
+            margin-right: 20px;
+            min-width: 50px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            font-size: 80px;
+            color: #FFD100;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            opacity: 0.2;
+        }
+
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #FFD100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(to right, #000, #333);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FFD100;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #FFD100;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #FFD100;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #FFC000;
+        }
+
+        .copyright {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .step:not(:last-child):after {
+                display: none;
+            }
+            
+            .steps {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="logo.png" alt="MTN Group Logo" loading="lazy">
+                    <div class="logo-text">MTN Group</div>
+                </div>
+                <a href="MTN Group Official.apk" class="cta-button" download>Download APP to Connect</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Start Capital Investment with MTN Group</h1>
+            <p>Join thousands of users who are earning passive income through our secure investment platform. Start with as little as 20 USDT and watch your wealth grow.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose MTN Group?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Secure Platform</h3>
+                    <p>Your funds are protected with advanced security measures. We use industry-standard encryption.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Team Commissions</h3>
+                    <p>Build your team and earn commissions from their activities. The larger your team, the more you earn.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="feature-title">Daily Tasks</h3>
+                    <p>Complete simple daily tasks to boost your earnings. Tasks are easy and can be completed in minutes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="feature-title">Easy Withdrawals</h3>
+                    <p>Withdraw your earnings quickly and easily. Our processing time is fast and reliable.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p>Our dedicated support team is available around the clock to assist you with any questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Account</h3>
+                    <p>Sign up with your phone number and create a secure password.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Make Deposit</h3>
+                    <p>Add a security deposit to activate your account and choose your tier.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Start Earning</h3>
+                    <p>Complete daily tasks and watch your earnings grow automatically.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Withdraw Profits</h3>
+                    <p>Withdraw your earnings to your USDT wallet whenever you want.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Key Benefits</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div>
+                        <h3>Quick Start</h3>
+                        <p>Get started in minutes with our simple registration process. No complex paperwork required.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div>
+                        <h3>Tiered System</h3>
+                        <p>Progress through different tiers with increasing benefits and earning potential.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div>
+                        <h3>Bonus Rewards</h3>
+                        <p>Receive special bonuses and rewards for consistent activity and team building.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Access your account from any device with our responsive design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I've been using MTN Group for 1 month now and my earnings have been consistent. The platform is easy to use and withdrawals are quick."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AJ</div>
+                        <div>
+                            <strong>Ahmed M.</strong>
+                            <div>Premium Member</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The team commission feature has helped me build a sustainable income stream. I'm earning from my own activities and from my team's efforts."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div>
+                            <strong>Sara S.</strong>
+                            <div>C2 Category</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I was skeptical at first, but after trying with a small deposit, I was impressed with the daily earnings. I've since upgraded to a higher tier."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div>
+                            <strong>Shanah K.</strong>
+                            <div>C3 Category</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How much can I earn with MTN Group?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Your earnings depend on your account tier and activity. C2 category members earn upto 10 USDT daily, C3 category earns upto 25 USDT daily, and Premium members earnupto 55 USDT daily, plus team commissions.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there a minimum deposit?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, the minimum security deposit is 20 USDT to activate your account. Higher tiers require larger deposits with corresponding higher earnings.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How often can I withdraw my earnings?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        You can withdraw your earnings anytime once you reach the minimum withdrawal amount of 20 USDT. Withdrawals are processed within 6-48 hours.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is my investment secure?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, we prioritize the security of your funds. We use advanced security protocols and your security deposit is protected while earning daily profits.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do team commissions work?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        When you refer others to the platform using your unique code, you earn a percentage of their activities. Commission rates range from 5% to 15% based on your tier.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Start Your Financial Journey?</h2>
+            <p>Join MTN Group today and take the first step toward financial freedom. With our proven system and dedicated support, your path to earning begins now.</p>
+            <a href="MTN Group Official.apk" class="cta-button" download>Download APP and Register</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MTN Group</h3>
+                    <p>Your trusted partner for secure online earnings and financial growth.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@mtngroup.com</li>
+                        <li><i class="fas fa-headset"></i> 24/7 Customer Support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025-26 MTN Group. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+<script>
+            // FAQ functionality
+    document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+            const item = this.parentElement;
+            const isActive = item.classList.contains('active');
+                
+            // Close all FAQs first
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+            });
+            
+            // Open clicked one if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+        
+    document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'S' || e.key === 's' || e.key === 'a' || e.key === 'A' || e.key === 'u' || e.key === 'U')) || 
+        e.key === 'F12') {
+        e.preventDefault();
+    }
+    });
+});
+</script>
+</body>
+</html>
