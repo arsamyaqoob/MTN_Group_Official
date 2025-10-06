@@ -43,6 +43,7 @@
 
         .header-content {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
         }
@@ -58,7 +59,8 @@
         }
 
         .logo-text {
-            font-size: 24px;
+            font-size: 22px;
+            align-content: center;
             font-weight: bold;
         }
 
@@ -68,7 +70,7 @@
             padding: 10px 20px;
             border-radius: 4px; /* Less rounded */
             text-decoration: none;
-            font-weight: 600; /* Less bold */
+            font-weight: 500; /* Less bold */
             transition: all 0.3s ease;
         }
 
@@ -401,11 +403,6 @@
                 flex-direction: column;
                 gap: 40px;
             }
-            
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-            }
         }
     </style>
 </head>
@@ -415,10 +412,11 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="logo.png" alt="MTN Group Logo" loading="lazy">
-                    <div class="logo-text">MTN Group</div>
+                    <img src="logo.png" alt="MTN Logo" loading="lazy">
                 </div>
-                <a href="MTN Group Official.apk" class="cta-button" download>Download APP to Connect</a>
+                <div class="logo-text">MTN Group</div>
+                <a href="https://www.mtngroup.site" class="cta-button">Login</a>
+                </div>
             </div>
         </div>
     </header>
